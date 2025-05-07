@@ -1,0 +1,18 @@
+<h1>Restaurants#show</h1>
+
+<div class='card p-3'>
+  <h1><%= @restaurant.name %></h1>
+  <p><strong>Address:</strong> <%= @restaurant.address %></p>
+  <p><strong>Phone:</strong>   <%= @restaurant.phone_number %></p>
+  <p><strong>Category:</strong> <%= @restaurant.category %></p>
+</div>
+
+<h2 class='p-3'>Reviews</h2>
+<ul class='p-3'>
+  <% @restaurant.reviews.each do |review| %>
+    <p>Rating - <strong><%= review.rating %></strong></p>
+    <p>"<%= review.content %>"</p>
+  <% end %>
+</ul>
+
+<%= link_to "Back to list", restaurants_path %>

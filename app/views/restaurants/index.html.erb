@@ -1,0 +1,6 @@
+<h1>All Restaurants</h1>
+<div>
+  <% @restaurants.each do |restaurant| %>
+      <%= render restaurant %>  <!-- this will use _restaurant.html.erb -->
+  <% end %>
+</div>
